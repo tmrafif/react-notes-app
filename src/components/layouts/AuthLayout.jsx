@@ -21,10 +21,20 @@ function AuthLayout({ children, type }) {
                 <p className="text-md text-neutral-900 dark:text-neutral-200">
                     {type === "login" ? text.registerAsk : text.loginAsk}{" "}
                     {type === "login" && (
-                        <Link to="/register">{text.registerLink}</Link>
+                        <Link
+                            to="/register"
+                            className="text-secondary hover:text-primary"
+                        >
+                            {text.registerLink}
+                        </Link>
                     )}
                     {type === "register" && (
-                        <Link to="/login">{text.loginLink}</Link>
+                        <Link
+                            to="/login"
+                            className="text-secondary hover:text-primary"
+                        >
+                            {text.loginLink}
+                        </Link>
                     )}
                 </p>
             </div>

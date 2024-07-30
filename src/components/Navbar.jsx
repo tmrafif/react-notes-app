@@ -21,8 +21,16 @@ function Navbar() {
             </h1>
             <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-8">
                 <div className="flex gap-4 md:text-lg text-light">
-                    {user && <Link to="/">{text.home}</Link>}
-                    {user && <Link to="/archives">{text.archive}</Link>}
+                    {user && (
+                        <Link to="/" className="hover:brightness-90">
+                            {text.home}
+                        </Link>
+                    )}
+                    {user && (
+                        <Link to="/archives" className="hover:brightness-90">
+                            {text.archive}
+                        </Link>
+                    )}
                 </div>
                 <div className="flex items-center gap-1">
                     <ThemeButton theme={theme} onClick={toggleTheme} />
